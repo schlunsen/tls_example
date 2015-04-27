@@ -16,5 +16,6 @@ var options = {
 
 tls.createServer(options, function (s) {
   s.write(msg+"\n");
+  console.log(s);
   s.pipe(s);
 }).listen(8000);
