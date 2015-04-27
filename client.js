@@ -16,12 +16,14 @@ var conn = tls.connect(8000, options, function() {
   } else {
     console.log("Connection not authorized: " + conn.authorizationError)
   }
-    console.log();
+
+    process.stdin.pipe(conn);
+    //process.stdin.resume();
 });
 
 
 
 conn.on("data", function (data) {
   console.log(data.toString());
-  conn.end();
+  //conn.end();
 });
