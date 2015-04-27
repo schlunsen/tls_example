@@ -5,8 +5,8 @@ var tls = require('tls'),
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 var options = {
-  key: fs.readFileSync('private-key.pem'),
-  cert: fs.readFileSync('public-cert.pem'),
+  key: fs.readFileSync('keys/private-key.pem'),
+  cert: fs.readFileSync('keys/public-cert.pem'),
   rejectUnhauthorized : false
 };
 

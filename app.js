@@ -10,8 +10,8 @@ var tls = require('tls'),
           ].join("\n").cyan;
 
 var options = {
-  key: fs.readFileSync('private-key.pem'),
-  cert: fs.readFileSync('public-cert.pem')
+  key: fs.readFileSync('keys/private-key.pem'),
+  cert: fs.readFileSync('keys/public-cert.pem')
 };
 
 tls.createServer(options, function (s) {
